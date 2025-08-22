@@ -167,6 +167,110 @@ Represents feedback left by users for properties.
 - **Booking ↔ Payment**: One-to-one (each booking has one payment)
 
 ---
+## 🔐 API Security
+
+Security is a foundational aspect of the Airbnb Clone backend. Protecting user data, securing financial transactions, and preventing abuse are critical for maintaining trust and system integrity.
+
+---
+
+### 🧾 Authentication
+
+**What It Is:**  
+Verifies the identity of users accessing the system.
+
+**Implementation:**  
+- Token-based authentication (e.g., JWT or OAuth2)
+- Secure password hashing (e.g., bcrypt)
+- Multi-factor authentication (optional for hosts or admins)
+
+**Why It Matters:**  
+Prevents unauthorized access to user accounts and sensitive data, ensuring only verified users can interact with the platform.
+
+---
+
+### 🛂 Authorization
+
+**What It Is:**  
+Controls what authenticated users are allowed to do.
+
+**Implementation:**  
+- Role-based access control (RBAC) for guests, hosts, and admins
+- Endpoint-level permission checks (e.g., only hosts can modify their properties)
+
+**Why It Matters:**  
+Ensures users can only perform actions they’re permitted to—e.g., a guest shouldn’t be able to delete another host’s property.
+
+---
+
+### 🚦 Rate Limiting
+
+**What It Is:**  
+Restricts the number of requests a user or IP can make in a given time frame.
+
+**Implementation:**  
+- Throttling via Django REST Framework or middleware
+- IP-based or token-based limits
+
+**Why It Matters:**  
+Protects the API from abuse, brute-force attacks, and denial-of-service (DoS) attempts, ensuring stable performance for all users.
+
+---
+
+### 🧼 Input Validation & Sanitization
+
+**What It Is:**  
+Ensures all incoming data is clean, safe, and conforms to expected formats.
+
+**Implementation:**  
+- Field-level validation in serializers
+- Escaping user input to prevent injection attacks
+
+**Why It Matters:**  
+Prevents common vulnerabilities like SQL injection, XSS, and malformed data that could compromise the system.
+
+---
+
+### 🔒 Secure Payments
+
+**What It Is:**  
+Protects financial transactions and sensitive payment information.
+
+**Implementation:**  
+- Integration with trusted payment gateways (e.g., Stripe, PayPal)
+- HTTPS encryption for all payment-related endpoints
+- Tokenization of payment data
+
+**Why It Matters:**  
+Ensures user trust and compliance with financial regulations by safeguarding payment details and preventing fraud.
+
+---
+
+### 🧠 Session & Token Management
+
+**What It Is:**  
+Manages user sessions securely and prevents token misuse.
+
+**Implementation:**  
+- Expiry and refresh mechanisms for tokens
+- Revocation of tokens on logout or suspicious activity
+- Redis-backed session storage for scalability
+
+**Why It Matters:**  
+Prevents session hijacking and ensures users remain securely authenticated across interactions.
+
+---
+
+### 🛡️ Security Summary
+
+| Area              | Security Focus                          | Risk Mitigated                      |
+|-------------------|------------------------------------------|-------------------------------------|
+| User Accounts     | Authentication & Authorization           | Unauthorized access, data leaks     |
+| API Endpoints     | Rate Limiting & Input Validation         | Abuse, injection attacks            |
+| Payments          | Encryption & Gateway Integration         | Fraud, financial data exposure      |
+| Sessions          | Token Management & Expiry                | Session hijacking, token misuse     |
+
+---
+
 
 
 ## 📌 REST API Endpoints Overview
