@@ -31,7 +31,7 @@ A scalable and robust backend system designed to replicate the core functionalit
 
 ---
 
-## 🛠️ Features Breakdown
+## 🛠️ Feature Breakdown
 
 ### 1. API Documentation
 - **OpenAPI Standard**: Clear and comprehensive documentation for REST endpoints.
