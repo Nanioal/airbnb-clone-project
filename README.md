@@ -270,6 +270,53 @@ Prevents session hijacking and ensures users remain securely authenticated acros
 | Sessions          | Token Management & Expiry                | Session hijacking, token misuse     |
 
 ---
+## 🚀 CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) are essential practices for modern software development. They automate the process of building, testing, and deploying code, ensuring faster delivery and higher reliability.
+
+---
+
+### 🔄 What Is CI/CD?
+
+- **Continuous Integration (CI)**: Automatically integrates code changes from multiple contributors into a shared repository. It runs tests and checks to catch issues early.
+- **Continuous Deployment (CD)**: Automatically deploys validated code to production or staging environments, reducing manual effort and deployment errors.
+
+---
+
+### 🎯 Why CI/CD Matters for This Project
+
+- **Reliability**: Ensures that every code change is tested before deployment, reducing bugs and regressions.
+- **Speed**: Automates repetitive tasks like testing and deployment, accelerating development cycles.
+- **Collaboration**: Supports multiple contributors by integrating changes smoothly and consistently.
+- **Scalability**: Makes it easier to manage deployments across environments (development, staging, production).
+
+---
+
+### 🛠️ Recommended Tools
+
+| Tool              | Purpose                                                                 |
+|-------------------|-------------------------------------------------------------------------|
+| **GitHub Actions**| Automates CI/CD workflows directly within the GitHub repository.         |
+| **Docker**        | Containerizes the application for consistent builds and deployments.     |
+| **Docker Compose**| Manages multi-container setups for local development and testing.        |
+| **PostgreSQL**    | Used in CI environments to test database interactions.                   |
+| **Celery + Redis**| Can be integrated into CI pipelines to test asynchronous task handling.  |
+| **Coverage.py**   | Measures test coverage to ensure code quality.                           |
+
+---
+
+### 🧪 Typical CI/CD Workflow
+
+1. **Code Push** → Developer pushes code to GitHub.
+2. **CI Triggered** → GitHub Actions runs tests, linting, and coverage checks.
+3. **Build Docker Image** → Docker builds the backend container.
+4. **Deploy to Staging** → If tests pass, code is deployed to a staging environment.
+5. **Manual or Auto Deploy to Production** → Final deployment after approval or automated trigger.
+
+---
+
+CI/CD pipelines help maintain momentum and confidence in the development process. For a platform like Airbnb Clone, where reliability and speed are key, this automation is a game-changer.
+
 
 
 
