@@ -62,6 +62,112 @@ A scalable and robust backend system designed to replicate the core functionalit
 - **Caching**: Reduce database load and improve performance.
 
 ---
+## 🗄️ Database Design
+
+This section outlines the core entities in the Airbnb Clone backend and how they relate to each other. The design ensures data integrity, scalability, and efficient querying.
+
+---
+
+### 👤 Users
+
+Represents guests and hosts on the platform.
+
+**Key Fields:**
+- `id`: Unique identifier for each user
+- `username`: User’s login name
+- `email`: Contact email
+- `password_hash`: Encrypted password
+- `is_host`: Boolean flag indicating if the user can list properties
+
+**Relationships:**
+- A user **can own multiple properties**
+- A user **can make multiple bookings**
+- A user **can leave multiple reviews**
+
+---
+
+### 🏠 Properties
+
+Represents listings created by hosts.
+
+**Key Fields:**
+- `id`: Unique identifier for each property
+- `title`: Name of the property
+- `description`: Detailed info about the property
+- `location`: Address or coordinates
+- `price_per_night`: Cost per night
+
+**Relationships:**
+- A property **belongs to one user (host)**
+- A property **can have multiple bookings**
+- A property **can receive multiple reviews**
+
+---
+
+### 📅 Bookings
+
+Represents reservations made by users.
+
+**Key Fields:**
+- `id`: Unique identifier for each booking
+- `user_id`: Reference to the guest who made the booking
+- `property_id`: Reference to the booked property
+- `check_in`: Start date of the booking
+- `check_out`: End date of the booking
+
+**Relationships:**
+- A booking **belongs to one user**
+- A booking **is for one property**
+- A booking **can have one payment record**
+
+---
+
+### 💳 Payments
+
+Represents transactions for bookings.
+
+**Key Fields:**
+- `id`: Unique identifier for each payment
+- `booking_id`: Reference to the associated booking
+- `amount`: Total payment amount
+- `payment_method`: e.g., credit card, PayPal
+- `status`: e.g., pending, completed, failed
+
+**Relationships:**
+- A payment **is linked to one booking**
+- A booking **can have one payment**
+
+---
+
+### ⭐ Reviews
+
+Represents feedback left by users for properties.
+
+**Key Fields:**
+- `id`: Unique identifier for each review
+- `user_id`: Reference to the reviewer
+- `property_id`: Reference to the reviewed property
+- `rating`: Numerical score (e.g., 1–5)
+- `comment`: Textual feedback
+
+**Relationships:**
+- A review **is written by one user**
+- A review **is for one property**
+- A property **can have many reviews**
+
+---
+
+### 🔗 Entity Relationships Summary
+
+- **User ↔ Properties**: One-to-many (a host can list many properties)
+- **User ↔ Bookings**: One-to-many (a guest can make many bookings)
+- **User ↔ Reviews**: One-to-many (a user can leave many reviews)
+- **Property ↔ Bookings**: One-to-many (a property can be booked many times)
+- **Property ↔ Reviews**: One-to-many (a property can have many reviews)
+- **Booking ↔ Payment**: One-to-one (each booking has one payment)
+
+---
+
 
 ## 📌 REST API Endpoints Overview
 
