@@ -100,8 +100,6 @@ A scalable and robust backend system designed to replicate the core functionalit
 
 ## 👥 Team Roles
 
-## 👥 Team Roles
-
 This section outlines the key roles within the Airbnb Clone backend project team, along with their responsibilities. These roles are essential for delivering a scalable, secure, and feature-rich platform.
 
 ### 🔧 Backend Developer
