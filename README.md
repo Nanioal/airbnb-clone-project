@@ -100,10 +100,53 @@ A scalable and robust backend system designed to replicate the core functionalit
 
 ## 👥 Team Roles
 
-- **Backend Developer**: API development, business logic, and database schema design.
-- **Database Administrator**: Schema optimization, indexing, and performance tuning.
-- **DevOps Engineer**: Deployment, monitoring, and scaling backend services.
-- **QA Engineer**: Testing and quality assurance of backend functionalities.
+## 👥 Team Roles
+
+This section outlines the key roles within the Airbnb Clone backend project team, along with their responsibilities. These roles are essential for delivering a scalable, secure, and feature-rich platform.
+
+### 🔧 Backend Developer
+- Implements core business logic and API endpoints using Django and Django REST Framework.
+- Ensures secure user authentication, booking workflows, and payment processing.
+- Collaborates with frontend and DevOps teams to integrate services and maintain performance.
+
+### 🗄️ Database Administrator (DBA)
+- Designs and manages the PostgreSQL database schema.
+- Optimizes queries and indexing for fast data retrieval.
+- Oversees data integrity, backups, and performance tuning.
+
+### 🚀 DevOps Engineer
+- Builds and maintains CI/CD pipelines for automated testing and deployment.
+- Manages Docker containers and orchestrates scalable infrastructure.
+- Ensures system reliability, monitoring, and rollback strategies.
+
+### 🧪 QA Engineer
+- Develops and executes test plans to validate backend functionality.
+- Performs functional, performance, and security testing.
+- Reports bugs and ensures quality standards are met before release.
+
+### 🧠 Software Architect *(from ITRexGroup)*
+- Designs high-level system architecture and selects appropriate technologies.
+- Establishes coding standards and reviews implementation for scalability and maintainability.
+- Guides integration strategies and ensures long-term system stability.
+
+### 🧑‍💻 Software Developer *(from ITRexGroup)*
+- Writes and maintains backend code, focusing on algorithms and business logic.
+- Troubleshoots technical issues and contributes to feature development.
+- May specialize in either frontend, backend, or full-stack development.
+
+### 🧪 Test Automation Engineer *(from ITRexGroup)*
+- Creates and maintains automated test scripts for regression and performance testing.
+- Builds a test automation ecosystem to ensure continuous quality feedback.
+- Identifies areas suitable for automation and integrates with CI/CD pipelines.
+
+### ⚙️ Project Manager *(from ITRexGroup)*
+- Oversees project timelines, resource allocation, and team coordination.
+- Facilitates communication between stakeholders and technical teams.
+- Ensures deliverables align with business goals and are completed on schedule.
+
+
+
+
 
 ---
 
